@@ -3,18 +3,23 @@
 // Steven Cogswell
 // May 2011
 
-#include <SerialCommand.h> //
+//it will be updated soon
+
+#include <SerialCommand.h> 
 
 #define arduinoLED 13   // Arduino LED on board
 
 SerialCommand sCmd;     // The demo SerialCommand object
 
+//by me, going to use this for the update.
 String processor = "AVR based. !!It is better to use an arduino due!!";
 String prompt = "NoUser@system";
 
 #if defined(__SAM3X8E__)
 #define processor   "ARM Cortex M3"
 #endif
+//end of my own stuff
+
 
 void setup() {
   pinMode(arduinoLED, OUTPUT);      // Configure the onboard LED for output
@@ -66,10 +71,11 @@ void LED_blink(){
   
 }
 
+//also mine
 void CPU_info(){
   Serial.println(processor);
 }
-
+//-------------
 
 void sayHello() {
   char *arg;
@@ -110,12 +116,16 @@ void processCommand() {
   }
 }
 
+
+//partially cloned from above  
 void echo(){
   char *arg;
 
   arg = sCmd.next();
   Serial.println(arg);
 }
+//-----------------------
+
 
 // This gets set as the default handler, and gets called when no other command matches.
 void unrecognized(const char *command) {
