@@ -1,8 +1,9 @@
+// I based this on
 // Demo Code for SerialCommand Library
 // Steven Cogswell
 // May 2011
 
-#include <SerialCommand.h>
+#include <SerialCommand.h> //
 
 #define arduinoLED 13   // Arduino LED on board
 
