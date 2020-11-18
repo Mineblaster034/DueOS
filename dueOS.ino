@@ -26,7 +26,7 @@ void setup() {
   digitalWrite(arduinoLED, LOW);    // default to LED off
   
 
-  Serial.begin(9600);
+  Serial.begin(9600);         //note: should be higher! (Mineblaster034)
 
   Serial.println(prompt);
 
@@ -39,7 +39,7 @@ void setup() {
   sCmd.addCommand("ledBlink",  LED_blink);
   sCmd.addCommand("CPU_info",  CPU_info);
   sCmd.setDefaultHandler(unrecognized);          // Handler for command that isn't matched  (says "What?")
-  Serial.println("started \n\r dueOS comes without any warranty \n\r permitted by the applicable law.");
+
 }
 
 void loop() {
